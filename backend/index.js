@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const Blog = require('./models/Blog');
 
@@ -8,6 +9,7 @@ const dbUrl = "mongodb+srv://root:root@bonny001.3pg8e.mongodb.net/bgm-blogs?retr
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(dbUrl)
     .then(()=>{
