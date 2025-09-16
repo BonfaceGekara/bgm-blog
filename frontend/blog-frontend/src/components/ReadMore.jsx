@@ -27,7 +27,7 @@ function ReadMore() {
                 <h3 className="text-primary p-3">{blog.sub_title}</h3>
                 <p>{blog.content}</p>
                 <div className="d-flex justify-content-end">
-                    <p>Posted by : {blog.posted_by}.</p>
+                    <p className="text-success">Posted by : {blog.posted_by}.</p>
                 </div>
             </div>
             <div className="col-md-3"></div>
