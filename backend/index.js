@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const Blog = require('./models/Blog');
+const blogRoutes = require('./routes/blogRoutes');
 
 const dbUrl = "mongodb+srv://root:root@bonny001.3pg8e.mongodb.net/bgm-blogs?retryWrites=true&w=majority&appName=Bonny001";
 
@@ -28,3 +29,5 @@ app.get('/blogs', async (req,res) => {
         res.status(500).json({ message : 'Server error'});
     }
 });
+
+app.use('/blog',blogRoutes);

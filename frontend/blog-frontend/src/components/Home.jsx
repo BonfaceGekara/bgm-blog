@@ -1,6 +1,7 @@
 import React from "react";
 import { useState , useEffect } from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -26,7 +27,7 @@ function Home() {
                         <h3 className="card-title">{blog.title}</h3>
                         <p className="card-text">{blog.sub_title}</p>
                         <div className="mt-auto d-flex justify-content-end">
-                            <a href="" className="btn btn-primary btn-sm">Read more</a>
+                            <Link to={`readmore/${blog._id}`} className="btn btn-primary btn-sm">Read More</Link>
                         </div>
                     </div>
                 </div>
